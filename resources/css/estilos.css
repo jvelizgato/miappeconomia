@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+}
+
+.formulario{
+    text-align: center;
+    background-color: antiquewhite;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+label{
+    display:inline;
+    text-align: left;
+}
+#btn{
+    background-color: #4CAF50;
+      }
+td,th{
+    border: solid #871aed 1px;
+    padding: 5px;
+    text-align: center;
+}
+table{
+    margin: 0px, center;
+
+}
