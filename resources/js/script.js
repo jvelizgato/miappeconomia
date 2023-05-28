@@ -25,12 +25,13 @@ const form = document.getElementById("transactionform");
 
     let transactionObjArray = JSON.parse(localStorage.getItem("transactionData"));
     // Aquí guardamos en un array los elementos del LocalStorage parseándolos con JSON
-    drawCategories();
+    
     if (transactionObjArray !== null) {
         transactionObjArray.forEach(function (arrayElement) {
             // Luego insertamos en la tabla utilizando la función insertRowInTransactionTable 
             insertRowInTransactionTable(arrayElement);
         });
+        drawCategories();
     }
    
         
