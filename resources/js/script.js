@@ -16,6 +16,7 @@ const form = document.getElementById("transactionform");
             //console.log(transactionObject)
             insertRowInTransactionTable(transactionObject);
             form.reset();
+           
     });
 
     document.addEventListener("DOMContentLoaded", function(event) {
@@ -24,12 +25,15 @@ const form = document.getElementById("transactionform");
 
     let transactionObjArray = JSON.parse(localStorage.getItem("transactionData"));
     // Aquí guardamos en un array los elementos del LocalStorage parseándolos con JSON
-
-    transactionObjArray.forEach(function (arrayElement) {
-        // Luego insertamos en la tabla utilizando la función insertRowInTransactionTable 
-        insertRowInTransactionTable(arrayElement);
-    });
-        drawCategories();
+    drawCategories();
+    if (transactionObjArray !== null) {
+        transactionObjArray.forEach(function (arrayElement) {
+            // Luego insertamos en la tabla utilizando la función insertRowInTransactionTable 
+            insertRowInTransactionTable(arrayElement);
+        });
+    }
+   
+        
     })
 
 
