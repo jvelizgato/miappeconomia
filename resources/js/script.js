@@ -140,7 +140,8 @@ const form = document.getElementById("transactionform");
             "Sueldo",
             "Vestimenta",
             "Venta",
-            "trabajo Sublimado"
+            "trabajo Sublimado",
+            "Reparaciones"
             ];
         for (let index = 0; index < allCategories.length; index++) {
             //const element = ;
