@@ -12,6 +12,8 @@
             insertRowInTransactionTable(arrayElement);
         });
         drawCategories();
+    }else{
+       drawCategories();
     }
    
         
