@@ -152,6 +152,6 @@ const form = document.getElementById("transactionform");
     function insertCategory(categoryName) {
         const selectElement = document.getElementById("transactionCategory");
         let htmlToInsert = `<option> ${categoryName}</option>`;
-        selectElement.insertAdjacentHTML("beforeend", htmlToInsert);
+        selectElement.insertAdjacentHTML('beforeend', htmlToInsert);
 
     }
