@@ -1,4 +1,21 @@
 
+  document.addEventListener("DOMContentLoaded", function(event) {
+    // El evento DOMContentLoaded sucede cuando se carga el HTML y se parsea en el navegador
+    // Sucede antes de que la página cargue sus recursos (CSS y otros elementos que no son HTML)
+
+    let transactionObjArray = JSON.parse(localStorage.getItem("transactionData"));
+    // Aquí guardamos en un array los elementos del LocalStorage parseándolos con JSON
+    
+    if (transactionObjArray !== null) {
+        transactionObjArray.forEach(function (arrayElement) {
+            // Luego insertamos en la tabla utilizando la función insertRowInTransactionTable 
+            insertRowInTransactionTable(arrayElement);
+        });
+        drawCategories();
+    }
+   
+        
+    });
 const form = document.getElementById("transactionform");
 
     form.addEventListener("submit", function(event){
@@ -19,23 +36,7 @@ const form = document.getElementById("transactionform");
            
     });
 
-    document.addEventListener("DOMContentLoaded", function(event) {
-    // El evento DOMContentLoaded sucede cuando se carga el HTML y se parsea en el navegador
-    // Sucede antes de que la página cargue sus recursos (CSS y otros elementos que no son HTML)
-
-    let transactionObjArray = JSON.parse(localStorage.getItem("transactionData"));
-    // Aquí guardamos en un array los elementos del LocalStorage parseándolos con JSON
-    
-    if (transactionObjArray !== null) {
-        transactionObjArray.forEach(function (arrayElement) {
-            // Luego insertamos en la tabla utilizando la función insertRowInTransactionTable 
-            insertRowInTransactionTable(arrayElement);
-        });
-        drawCategories();
-    }
-   
-        
-    })
+  
 
 
     function saveTransactionObject(transactionObject) {
