@@ -144,8 +144,8 @@ const form = document.getElementById("transactionform");
             ];
         for (let index = 0; index < allCategories.length; index++) {
             //const element = ;
-            insertCategory(allCategories[index])
-        }
+            insertCategory(allCategories[index]);
+        };
         
     }
 
