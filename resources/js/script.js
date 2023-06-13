@@ -136,7 +136,6 @@ const form = document.getElementById("transactionform");
     }
     function drawCategories() {
         let allCategories = [
-            
             "Comida",
             "Sueldo",
             "Vestimenta",
